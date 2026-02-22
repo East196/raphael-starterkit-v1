@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  devIndicators: {
-    appIsrStatus: false,
-  },
-  
+  // Enable Turbopack (required for Next.js 16+)
+  turbopack: {},
+
   // Configure webpack to ignore the external folder
   webpack: (config: any) => {
     config.watchOptions = {
